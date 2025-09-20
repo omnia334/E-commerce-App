@@ -56,7 +56,6 @@ export function RegisterForm() {
     setIsLoading(true);
     setApiError(null);
 
-    try {
       const res = await fetch(
         "https://ecommerce.routemisr.com/api/v1/auth/signup",
         {
@@ -73,11 +72,7 @@ export function RegisterForm() {
       }
 
       router.push("/login");
-    } catch (error: any) {
-      setApiError(error.message);
-    } finally {
       setIsLoading(false);
-    }
   }
 
   return (

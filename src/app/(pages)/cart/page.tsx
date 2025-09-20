@@ -101,7 +101,7 @@ export default function Cart() {
           <div className='mt-4 space-y-2'>
             <div className='flex items-center justify-between'>
               <span className='text-sm text-muted-foreground'>Subtotal({cartData?.numOfCartItems} items)</span>
-              <span className='font-semibold'>{formatCurrency(cartData?.data.totalCartPrice!)}</span>
+              <span className='font-semibold'>{formatCurrency(cartData?.data.totalCartPrice)}</span>
             </div>
             <div className='flex items-center justify-between'>
               <span className='text-sm text-muted-foreground'> Shipping</span>
@@ -112,9 +112,9 @@ export default function Cart() {
           <div className='my-4 border-t'>
             <div className='flex items-center justify-between'>
               <span className='text-base font-semibold'> Total</span>
-              <span className='text-base font-bold'>{formatCurrency(cartData?.data.totalCartPrice!)}</span>
+              <span className='text-base font-bold'>{formatCurrency(cartData?.data.totalCartPrice)}</span>
             </div>
-            <Checkout cartId={cartData?.cartId!} />
+            <Checkout cartId={cartData?.cartId} />
 
 
             <button className='w-full mt-3 h-11 rounded-xl border hover:bg-accent'> Continue Shopping</button>
